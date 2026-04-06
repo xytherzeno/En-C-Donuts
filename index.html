@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>En'C Donuts</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #fff3e0;
+      color: #333;
+      padding: 50px;
+    }
+    h1 {
+      color: #d84315;
+    }
+    button {
+      padding: 10px 20px;
+      margin: 10px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .yes-btn {
+      background-color: #43a047;
+      color: white;
+    }
+    .no-btn {
+      background-color: #e53935;
+      color: white;
+    }
+    p {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>En'C Donuts</h1>
+
+  <h2>Do you want to avail?</h2>
+  <button class="yes-btn" onclick="avail('yes')">YES</button>
+  <button class="no-btn" onclick="avail('no')">NO</button>
+  <p id="avail-msg"></p>
+
+  <h2>Do you want to see the available flavors?</h2>
+  <button class="yes-btn" onclick="flavor('yes')">YES</button>
+  <button class="no-btn" onclick="flavor('no')">NO</button>
+  <p id="flavor-msg"></p>
+
+  <script>
+    function avail(answer) {
+      const msg = document.getElementById('avail-msg');
+      if(answer === 'yes') {
+        msg.textContent = 'Kindly message this person: Elmer Villarente';
+      } else {
+        msg.textContent = 'No worries! Maybe next time 🙂';
+      }
+    }
+
+    function flavor(answer) {
+      const msg = document.getElementById('flavor-msg');
+      if(answer === 'yes') {
+        msg.textContent = 'Available flavors: Chocolate, Strawberry, Ube, Bavarian';
+      } else {
+        msg.textContent = 'Maybe next time 🙂';
+      }
+    }
+  </script>
+
+</body>
+</html>
